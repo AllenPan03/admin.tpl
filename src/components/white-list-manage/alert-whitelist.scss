@@ -1,0 +1,108 @@
+.mt10{
+  margin-top: 10px;
+}
+.mt30{
+  margin-top: 30px;
+}
+.mt50{
+  margin-top: 50px;
+}
+.mr40{
+  margin-right: 40px;
+}
+.mr15{
+  margin-right: 15px;
+}
+.mr30{
+  margin-right: 30px;
+}
+.pt20{
+  padding-top: 20px;
+}
+.input-normal {
+    border: 1px solid #e8e8e8;
+    height: 30px;
+    width: 198px;
+}
+.regForm label {
+    float: none;
+    text-align: right;
+    width: 140px;
+}
+.regForm .form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+.regForm .hideP p {
+    display: none;
+    font-size: 12px;
+    padding-left:144px;
+}
+.regForm .valid-error{
+    padding-left:144px;
+    color:#b94a48;
+    position:absolute;
+    font-size:12px;
+    white-space: nowrap;
+}
+.pl55 .valid-error{
+   padding-left: 55px!important;
+
+}
+.pl30 {
+  padding-left: 30px!important;
+  .valid-error{
+    padding-left: 290px!important;
+  }
+}
+.white-list{
+  .btn-default{
+    float: left;
+  }
+}
+
+
+// authManage
+#authEdit{
+  .form-group{
+    position: relative;
+  }
+  .valid-error{
+    position: absolute;
+    bottom: -15px;
+  }
+  .has-error {
+    .control-label{
+      color:#666!important;
+    }
+    .form-control{
+      border-color: #e8e8e8!important;
+    }
+    .valid-error{
+      color:#b94a48;
+    }
+}
+} 
+.regForm span{
+  margin-left:10px
+}
+.note {
+    height: 100px;
+    width: 200px;
+    border: 1px solid #e8e8e8;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    padding:10px;
+    resize: none; 
+}
+.modal-dialog{
+	width:600px;
+}
+.noData{
+	display:none;
+}
+.tab-content .col-xs-12 {
+    padding: 0;
+}
+i{
+  font-style: normal;
+}

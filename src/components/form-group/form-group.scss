@@ -1,0 +1,31 @@
+.form-group {
+    div, label {
+        padding-left: 0;
+    }
+}
+.query-form {
+   padding: 28px 0 14px 0; 
+   margin-bottom: 0;
+}
+.date-input {
+    width: 120px;
+}
+.form-inline .form-group {
+    margin-bottom: 14px;
+}
+.form-group label {
+  height: 34px;
+  line-height: 34px;
+  white-space: nowrap;
+  text-align: right;
+  padding-right: 7px;
+  font-weight: normal;
+  min-width: 80px;
+}
+.inline-input {
+  display: inline-block;
+  width: 100px;
+}
+.whp-n{
+    white-space: nowrap;
+}

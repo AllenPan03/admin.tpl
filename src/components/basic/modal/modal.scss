@@ -1,0 +1,28 @@
+.modal-content {
+    margin: 0;
+    border-radius: 0.2rem!important;
+    overflow: hidden;
+}
+.modal-dialog {
+    // margin: 0;
+    // left: auto;
+    width: auto;
+    padding-top: 120px;
+}
+.modal-header{
+    padding: 0.375rem 1rem;
+    background-color: #f7f7f7;
+    h4{
+        font-size: 1rem;
+        color: #333;
+        font-weight: 500;
+    }
+    .close{
+        font-size: 20px;
+    }
+}
+.modal-footer{
+    border-top: none;
+    padding: 0 1rem 0.375rem;
+    text-align: right!important;
+}

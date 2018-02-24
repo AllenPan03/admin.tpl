@@ -1,0 +1,77 @@
+# 当前项目
+
+## 生成文件
+_build
+_release
+_coverage
+_doc
+__*
+
+# Node.js
+
+## Node
+.node_repl_history
+pids
+*.pid
+*.pid.lock
+*.seed
+
+## NPM
+node_modules
+.npm
+
+## 常用框架
+jspm_packages
+lib-cov
+coverage
+.nyc_output
+.grunt
+.lock-wscript
+.eslintcache
+
+# 编辑器
+
+## Sublime
+*.sublime-workspace
+
+## Dreamweaver
+_notes
+
+## Webstorm
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dataSources*
+.idea/libraries/
+*.iws
+
+## Visual Studio
+.vs
+**/[Bb]in/[Dd]ebug/
+**/[Bb]in/[Rr]elease/
+[Oo]bj/
+*.sln.*
+*.vshost.*
+*.suo
+*.user
+_ReSharper*
+*.ReSharper
+.ntvs_analysis.dat
+**/[Bb]in/Microsoft.NodejsTools.WebRole.dll
+
+# 操作系统
+
+## 临时文件
+*.tmp
+*.log
+*~
+._*
+
+## Windows
+*.lnk
+$RECYCLE.BIN
+Desktop.ini
+ehthumbs.db
+Thumbs.db
+
+## OSX
+.DS_Store

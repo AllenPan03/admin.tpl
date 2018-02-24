@@ -1,0 +1,169 @@
+@import url(table.css);
+/*table*/
+.input-normal {
+  width: 198px;
+  height: 30px;
+  border: 1px solid #e8e8e8; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.tc {
+  text-align: center; }
+
+.tl {
+  text-align: left; }
+
+.tr {
+  text-align: right; }
+
+.mt10 {
+  margin-top: 10px; }
+
+.mt30 {
+  margin-top: 30px; }
+
+.mt50 {
+  margin-top: 50px; }
+
+.mr40 {
+  margin-right: 40px; }
+
+.mr15 {
+  margin-right: 15px; }
+
+.mr30 {
+  margin-right: 30px; }
+
+.pt20 {
+  padding-top: 20px; }
+
+.grayBg {
+  background-color: #f3f3f3; }
+
+.border {
+  border: 1px solid #e8e8e8; }
+
+.border-bottom {
+  border-bottom: 1px solid #e8e8e8; }
+
+.border-top {
+  border-top: 1px solid #e8e8e8; }
+
+.border-left {
+  border-left: 1px solid #e8e8e8; }
+
+.border-right {
+  border-right: 1px solid #e8e8e8; }
+
+#container {
+  padding: 30px 20px; }
+  #container label {
+    font-weight: normal;
+    margin-bottom: 0; }
+  #container .table td, #container .table th {
+    text-align: center; }
+  #container .table thead > tr > th, #container .table thead > tr > td {
+    border-bottom: none;
+    font-weight: normal; }
+  #container .table td {
+    color: #666; }
+  #container .table a {
+    color: #666;
+    text-decoration: underline; }
+  #container .noData {
+    display: none;
+    text-align: center;
+    padding: 30px 0; }
+  #container .infoTab .title {
+    line-height: 30px;
+    height: 30px;
+    border-bottom: 1px solid #e8e8e8; }
+  #container .infoTab label {
+    color: #9e9e9e; }
+  #container .infoTab .info {
+    padding: 30px 0 20px; }
+  #container .col-xs-12 {
+    padding: 0; }
+  #container .infoTable {
+    padding: 30px 15px; }
+  #container .formInfo {
+    padding: 20px 0;
+    width: 900px; }
+    #container .formInfo label {
+      min-width: 75px;
+      text-align: right; }
+    #container .formInfo .areaTxt {
+      padding: 15px; }
+      #container .formInfo .areaTxt textarea {
+        width: 790px; }
+  #container .bs-docs-sidenav {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    margin: 5px 0 0;
+    padding: 0;
+    width: 100%; }
+    #container .bs-docs-sidenav li a {
+      border: 1px solid #e5e5e5;
+      display: block;
+      margin: 0 0 -1px;
+      padding: 8px 14px;
+      color: #9e9e9e; }
+    #container .bs-docs-sidenav li a:hover {
+      background-color: #f5f5f5; }
+      #container .bs-docs-sidenav li a:hover .icon-chevron-right {
+        opacity: 0.5; }
+    #container .bs-docs-sidenav li:first-child a {
+      border-radius: 6px 6px 0 0; }
+    #container .bs-docs-sidenav li:last-child a {
+      border-radius: 0 0 6px 6px; }
+    #container .bs-docs-sidenav .active a {
+      border: 0 none;
+      box-shadow: 1px 0 0 rgba(0, 0, 0, 0.1) inset, -1px 0 0 rgba(0, 0, 0, 0.1) inset;
+      padding: 9px 15px;
+      position: relative;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+      z-index: 2; }
+    #container .bs-docs-sidenav .icon-chevron-right {
+      float: right;
+      margin-right: -6px;
+      margin-top: 2px;
+      opacity: 0.25; }
+    #container .bs-docs-sidenav .active .icon-chevron-right, #container .bs-docs-sidenav .active a:hover .icon-chevron-right {
+      opacity: 1; }
+  #container .outInfo ul {
+    padding: 0;
+    display: none; }
+    #container .outInfo ul table {
+      margin-bottom: 0; }
+    #container .outInfo ul p {
+      min-height: 30px;
+      line-height: 30px;
+      margin-bottom: 0; }
+  #container .outInfo .zmxy {
+    padding: 20px 0; }
+  #container .outInfo .t-mid {
+    height: 200px;
+    line-height: 200px; }
+  #container .outInfo .pd10 {
+    padding: 10px 0; }
+  #container .outInfo .balance {
+    padding: 0 0 10px 0; }
+  #container .table-responsive {
+    width: 100%;
+    overflow-x: scroll; }
+    #container .table-responsive thead > tr > th,
+    #container .table-responsive tbody > tr > th,
+    #container .table-responsive tfoot > tr > th,
+    #container .table-responsive thead > tr > td,
+    #container .table-responsive tbody > tr > td,
+    #container .table-responsive tfoot > tr > td {
+      white-space: nowrap; }
+    #container .table-responsive table {
+      margin-bottom: 0; }
+
+/*# sourceMappingURL=table.css.map */

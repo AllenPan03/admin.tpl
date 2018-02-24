@@ -1,0 +1,59 @@
+
+#container .pad30{
+  padding:30px 0;
+}
+#container .validateModal{
+  width: 380px;
+  margin: 0 auto;
+}
+.regForm label{
+  float: none;
+  text-align: right;
+    width: 140px;
+}
+.regForm .form-group{
+  margin-bottom: 20px;
+  position: relative;
+
+}
+.regForm .hideP p{
+  position: absolute;
+  bottom: -30px;
+  font-size: 12px;
+  left: 40%;
+  display: none;
+}
+.note{
+  height:100px;
+  width:220px;
+}
+.center-block{
+  text-align: center;
+}
+.uploading p{
+  margin:35px 0;
+}
+.input-lsm{
+  width:80px;
+}
+#container .modifyModal{
+  width:445px;
+}
+.long-item{
+  position: relative;
+}
+.right-item{
+  position: absolute;
+  right:0;
+  top:0;
+}
+.btn-add{
+  padding:4px 16px;
+}
+.border-line{
+  border-bottom:1px dashed #ddd;
+  padding-bottom:10px;
+}
+.regForm  .little-label{
+  width:60px;
+}

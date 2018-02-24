@@ -1,0 +1,150 @@
+@import "../../../scss/basic.scss";
+.tab-wrap {
+    padding-left: 224px;
+    padding-top: 60px;
+    margin-right: 14px;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 2px solid #e4e4e4;
+        li {
+            &:first-child {
+                margin-left: 0;
+            }
+            //background-color: #eee;
+            border-radius: 4px 4px 0 0;
+            margin: 6px 0 0 6px;
+            a {
+                padding: 5px 8px;
+                cursor: pointer;
+            }
+            i {
+                width: 16px;
+                height: 16px;
+                margin-top: -6px;
+                //margin-right: -6px;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: normal;
+            }
+            .close {
+                width: 16px;
+                height: 16px;
+                margin-top: -4px;
+                //margin-right: -8px;
+                vertical-align: middle;
+                text-align: center;
+                color: $defaultFontC;
+                cursor: pointer;
+                font-style: normal;
+                opacity: 1;
+                &:hover {
+                    background-color: red;
+                    color: #fff;
+                    border-radius: 8px;
+                }
+            }
+            .active {
+                color: $whiteC; 
+            }
+        }
+    }
+    .tab-content {
+        width: 100%;
+        height: 100%;
+        border-top: none;
+        .table-responsive {
+            overflow-x: scroll;
+            width: 100%;
+        }
+    }
+    thead > tr > th,
+    tbody > tr > th,
+    tfoot > tr > th,
+    thead > tr > td,
+    tbody > tr > td,
+    tfoot > tr > td {
+      white-space: nowrap;
+      text-align: center;
+    }
+    table{
+      margin-bottom: 0;
+    }
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    background-color: #f1faff;
+    color: #0d8ff6;
+    border: none;
+}
+.nav-tabs>li.active {
+    background-color: #f1faff;
+}
+
+.tab-wrap .tab-show {
+    li {
+        background-color: #f1faff;
+        border-radius: 4px 4px 0 0;
+        margin: 6px 0 0 6px;
+        height: 30px;
+        line-height: 30px;
+        .x-navtab-bar{
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #0d8ff6;
+            transition: left 0.15s, width 0.15s;
+        }
+        a {
+            display: inline-block;
+            width: calc(100% - 30px);
+            overflow: hidden;
+            max-width: 107px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            cursor: default;
+            margin-right: 0;
+            padding: 4px 8px;
+            cursor: pointer;
+            color: #666;
+            background-color: #f1faff;
+            &:hover{
+                background: #f1faff;
+                border-color: #f1faff;
+                border-bottom: none;
+            }
+        }
+        i {
+            width: 16px;
+            height: 16px;
+            margin-top: -6px;
+            //margin-right: -6px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: normal;
+        }
+        .close {
+            position: relative;
+            width: 16px;
+            height: 16px;
+            margin-top: 8px;
+            margin-left: 12px;
+            vertical-align: middle;
+            text-align: center;
+            color: #666;
+            cursor: pointer;
+            font-style: normal;
+            opacity: 1;
+            &:hover {
+                background-color: #e75242;
+                color: #fff;
+                border-radius: 8px;
+            }
+        }
+        .active {
+            //color: $whiteC; 
+        }
+    }
+}
