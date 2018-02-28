@@ -32,16 +32,16 @@ router.post('/api/login', (req, res) => {
         console.log(err)
         break
       case !doc:
-        res.send({ state: 0, msg: '账号不存在' })
+        res.send({ data: 1, msg: '账号不存在' })
         break
       case doc.pwd === pwd:
-        res.send({ state: 1, msg: '登陆成功' })
+        res.send({ data: 0, msg: '登陆成功' })
         break
       case doc.pwd !== pwd:
-        res.send({ state: 2, msg: '密码错误' })
+        res.send({ data: 2, msg: '密码错误' })
         break
       default:
-        res.send({ state: 3, msg: '未知错误' })
+        res.send({ data: 3, msg: '未知错误' })
     }
   })
 })

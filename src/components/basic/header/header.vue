@@ -1,5 +1,5 @@
 <style lang="scss">
-    @import './header.scss';
+@import "./header.scss";
 </style>
 <template>
     <div class="header">
@@ -19,7 +19,7 @@
         <div class="pull-right">
             <img src="../../../images/face.png"/>
             <span>{{uname}}</span>
-            <span><a :href="outUrl">退出</a></span>
+            <span><a href="javascript:;" @click="logout">退出</a></span>
         </div>  
     </div>
 </template>
@@ -28,25 +28,36 @@
  * 页头部分　
  * params: {uname}
  */
+import { set, get, unset } from "../../../js/cookieUtil";
 export default {
-    props: ['uname']
-    ,data(){return {'outUrl':'',flag: true,'iconName':'#icon-daohangshouqi'}}
-    ,methods: {
-        toggleNav () {
-            eventHub.$emit('toggle-nav');
-            eventHub.$emit('toggle-tab');
-            this.flag = !this.flag;
-            if (this.flag) {
-                this.iconName = '#icon-daohangshouqi'
-            } else {
-                this.iconName = '#icon-daohangzhankai'
-            } 
-        }
+  props: ["uname"],
+  data() {
+    return { outUrl: "", flag: true, iconName: "#icon-daohangshouqi" };
+  },
+  methods: {
+    toggleNav() {
+      eventHub.$emit("toggle-nav");
+      eventHub.$emit("toggle-tab");
+      this.flag = !this.flag;
+      if (this.flag) {
+        this.iconName = "#icon-daohangshouqi";
+      } else {
+        this.iconName = "#icon-daohangzhankai";
+      }
+    },
+    //退出
+    logout() {
+      unset("user", "/", window.location.hostname);
+      //this.SET_USER({ name: "", pwd: "" });
+      window.location.reload();
     }
-    ,created(){
-        //退出URL
-        let origin = window.location.origin 
-        this.outUrl =  (origin =="http://192.168.28.131:8013" || origin =="http://localhost:8013" || origin == "http://clmg.fed.weidai.work") ? "http://clmg.wdtest.cc/common/logout" : 'api/common/logout';
-    }
-}
+  },
+  created() {
+    //退出URL
+    let origin = window.location.origin;
+    this.outUrl =
+      origin == "http://192.168.28.131:8013" ||
+      origin == "http://localhost:8013";
+  }
+};
 </script>

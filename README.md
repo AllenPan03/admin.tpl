@@ -1,7 +1,7 @@
 # 项目目录
 
 本项目前端部分基于vue2.0 vue-cli 构建，在此基础上，用gulp替换全局静态资源引入，生成打包目录public
-服务端部分基于express4.14.0 实现
+服务端部分基于express4.14.0实现，
 数据库基于MongoDB
 
 build webpack 配置文件目录（开发时使用）。  

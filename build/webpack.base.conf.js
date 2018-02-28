@@ -6,7 +6,9 @@ var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
+    setup: './src/setup.js',
+    login: './src/login.js'
   },
   output: {
     path: config.build.assetsRoot,
@@ -26,8 +28,6 @@ module.exports = {
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
-
-
   module: {
     // preLoaders: [
     //   {
@@ -86,5 +86,5 @@ module.exports = {
         browsers: ['last 2 versions']
       })
     ]
-  }
+  },
 }

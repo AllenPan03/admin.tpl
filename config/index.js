@@ -6,7 +6,8 @@ module.exports = {
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
-        assetsRoot: path.resolve(__dirname, '../dist'),
+    setup: path.resolve(__dirname, '../dist/setup.html'),
+    assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: '',
     assetsPublicPath: '',
     productionSourceMap: true,
@@ -22,7 +23,11 @@ module.exports = {
     port: 8010,
     assetsSubDirectory: '',
     assetsPublicPath: '',
-    proxyTable: {},
+    proxyTable: {//服务器代理，便于开发时所有http请求转到node的3000端口，而不是前端的8010端口
+      // '/': {
+      //   target: 'http://localhost:3000/'
+      // }
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)

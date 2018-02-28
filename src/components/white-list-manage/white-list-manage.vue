@@ -115,15 +115,6 @@ export default {
   mixins: [mixins],
   created() {
     this.doQuery();
-    let indexUrl = action.rootPath + action.interface.menu;
-    let vm = this;
-    this.send(indexUrl, {}, function(res) {
-      if (res.code == 403) {
-        eventHub.$emit("show-alert", res.errorMsg);
-      } else {
-        vm.ssoId = res.ssoId;
-      }
-    });
   },
   activated() {
     eventHub.$on("do-reload", this.doReload);

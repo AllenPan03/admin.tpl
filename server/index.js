@@ -5,7 +5,7 @@ const favicon = require('serve-favicon')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const db = require('./db')
-const resolve = file => path.resolve(__dirname, file)
+const resolve = file => path.resolve(__dirname, file)//获取当前文件所在的绝对路径
 const api = require('./api')
 const app = express()
 const cors = require('cors'); //允许跨域
@@ -18,7 +18,7 @@ app.set('port', (process.env.port || 3000))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
-app.use('/dist', express.static(resolve('../dist')))
+app.use('/dist', express.static(resolve('../dist')))//设置静态文件目录
 app.use(api)
 
 app.post('/api/setup', function (req, res) {
@@ -31,11 +31,17 @@ app.post('/api/setup', function (req, res) {
     .catch(() => res.status(500).end())
 })
 
-app.get('*', function (req, res) {
-  const fileName = db.initialized ? 'index.html' : 'setup.html'
-  const html = fs.readFileSync(resolve('../' + fileName), 'utf-8')
-  // const html = fs.readFileSync(resolve('../setup.html'), 'utf-8')
-  res.send(html)
+app.get('/api/initialized', function (req, res) {
+  console.log(db.initialized)
+  if (db.initialized) {
+    res.send({code: 0,msg: '已初始化',})
+  } else {
+    res.send({code: -1,msg: '未初始化',})
+  }
+  // const fileName = db.initialized ? 'login.html' : 'setup.html'
+  // const html = fs.readFileSync(resolve('../' + fileName), 'utf-8')
+  // // const html = fs.readFileSync(resolve('../setup.html'), 'utf-8')
+  // res.send(html)
 })
 //处理跨域问题
 // app.all('*', function (req, res, next) {

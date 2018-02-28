@@ -1,8 +1,8 @@
 {
-  "name": "credit-loan-bs",
-  "version": "1.3.0",
-  "description": "weidai credit loan backstage",
-  "author": "jinxiaodan <xiaoshu29@hotmail.com>",
+  "name": "tpl",
+  "version": "0.0.1",
+  "description": "Simple Content Manage System",
+  "author": "panjunlin <panjunlin@qq.vip.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",

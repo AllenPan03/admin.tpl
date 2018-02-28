@@ -124,19 +124,7 @@ export default {
     var api = "http://portal.wdai.com/api";
     // 初始化 axios
     var origin = window.location.origin;
-    if (/\.weidai\.com\.cn$/.test(origin)) {
-      api = "http://portal.weidai.com.cn/api";
-    } else if (/\.wdai\.com$/.test(origin)) {
-      api = "http://portal.wdai.com/api";
-    } else {
-      api = "http://portal.wdai.com/api";
-    }
-    // let url = api+'/treeNode'
-    // this.post(url,{application:'CLMG',nodeName:'权限'},function(res){
-    //     if(res.data){
-    //         window.clmgList=res.data.children;
-    //     }
-    // })
+    
     //测试环境需要
     let _list = menuList;
     _list.map(function(item) {

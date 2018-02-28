@@ -3,16 +3,12 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 //入口组件
 // import App from './App'
-//路由组件
-// import Hello from './components/Hello.vue'
 
 import main from './main.vue'
 import welcome from './components/welcome/welcome.vue'
+import login from './components/login/login.vue'
 import whiteList from './components/white-list-manage/white-list-manage.vue' 
 
-//自定义表单验证
-//require('./js/customize-validate.js')
-// import tabShow from './components/basic/tab-show.vue'
 //安装路由
 Vue.use(VueRouter)
 Vue.use(VueResource)
@@ -25,12 +21,7 @@ const routes = [
 ]
 const router = new VueRouter({
     routes
-    //,mode: 'history'
 })
-
-/* eslint-disable no-new */
-// const main = new Vue({
-//   router
 
 const eventHub = new Vue()
 //设置全局变量

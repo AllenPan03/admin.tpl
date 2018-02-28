@@ -1,0 +1,54 @@
+@import "../../scss/variables";
+
+  section.login {
+    .form {
+      width: 500px;
+      height: 400px;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .icon i {
+        transition: all 4s;
+        &:hover {
+          transform: rotate(1440deg);
+        }
+      }
+      > p {
+        height: 50px;
+        text-align: center;
+        transition: all 0.4s;
+        &.info {
+          margin: 10px;
+          font-size: 12px;
+          height: 20px;
+          color: $black3;
+        }
+        &.input:hover {
+          color: $green2;
+        }
+        input {
+          transition: all 0.4s;
+          width: 200px;
+          padding: 8px;
+          border-bottom: 1px solid $green1;
+          &:focus {
+            width: 210px;
+          }
+        }
+        button {
+          transition: all 0.4s;
+          color: $black3;
+          border: 1px solid $green1;
+          border-radius: 4px;
+          width: 60px;
+          height: 30px;
+          &:hover {
+            background-color: $green1;
+            color: #FFF;
+          }
+        }
+      }
+    }
+  }
