@@ -4,6 +4,7 @@ const express = require('express')
 const favicon = require('serve-favicon')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
+const crypto = require("crypto")//导入加密模块
 const db = require('./db')
 const resolve = file => path.resolve(__dirname, file)//获取当前文件所在的绝对路径
 const api = require('./api')
@@ -21,7 +22,11 @@ app.use(cookieParser())
 app.use('/dist', express.static(resolve('../dist')))//设置静态文件目录
 app.use(api)
 
+//注册
 app.post('/api/setup', function (req, res) {
+  let md5 = crypto.createHash("md5");
+  req.body.pwd = md5.update(req.body.pwd).digest("hex");
+  console.log(req.body.pwd)
   new db.User(req.body)
     .save()
     .then(() => {
@@ -38,10 +43,6 @@ app.get('/api/initialized', function (req, res) {
   } else {
     res.send({code: -1,msg: '未初始化',})
   }
-  // const fileName = db.initialized ? 'login.html' : 'setup.html'
-  // const html = fs.readFileSync(resolve('../' + fileName), 'utf-8')
-  // // const html = fs.readFileSync(resolve('../setup.html'), 'utf-8')
-  // res.send(html)
 })
 //处理跨域问题
 // app.all('*', function (req, res, next) {

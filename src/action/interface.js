@@ -1,6 +1,6 @@
 var origin = window.location.origin + '/'
 var action = {
-    rootPath: "http://192.168.92.229:3000/api/",
+    rootPath: "http://192.168.90.14:3000/api/",
     timeout: 2000,
     method: "post",
     interface: {
