@@ -33,7 +33,7 @@
         <!-- 初始化页面 end -->
         <!-- 登录页面 start -->
         <div id="login" v-if="initialized&&(!isLogin)">
-            <div class="form">
+            <div class="form" @keyup.enter="doLogin">
             <p class="logo">
                 <i class="fa fa-fire fa-2x"></i>
             </p>
@@ -133,6 +133,8 @@ export default {
     this.send(url, {}, e => {
       if (e.code == 0) {
         this.initialized = true;
+      } else {
+        this.initialized = false;
       }
     });
     const user = get("user");
@@ -150,7 +152,7 @@ export default {
         return (this.info = "两次输入的密码不一致");
       this.post(setupUrl, { name: this.name, pwd: this.pwd }, e => {
         this.info = "创建成功, 即将跳转到登陆...";
-        setTimeout(() => window.location.reload(), 2500);
+        setTimeout(() => window.location.reload(), 1500);
       });
     },
     //登录
@@ -170,7 +172,7 @@ export default {
         }
       });
     },
-    
+
     closeModal: function() {
       this.modalView = "";
       $("#" + "modal").modal("hide");
