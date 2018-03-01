@@ -6,11 +6,11 @@
             <query-btn-group slot="btn"></query-btn-group>
         </form-group>
         <div class="clearfix">
-            <a v-if="showBtn('白名单管理','新增')" type="button" class="btn btn-default btn-outline x-space" @click="addWhitelist">新增白名单</a>
-            <a v-if="showBtn('白名单管理','操作历史')" type="button" class="btn btn-default btn-outline x-space" @click="goHistory">操作历史</a>
-            <a v-if="showBtn('白名单管理','批量导入')" type="button" class="btn btn-sm btn-default btn-outline x-space" @click="addExcel">批量导入</a>
-            <a v-if="showBtn('白名单管理','批量移除')" type="button" class="btn btn-sm btn-default btn-outline x-space"  @click="removeExcel">批量移除</a>
-            <a v-if="showBtn('白名单管理','批量修改额度')" type="button" class="btn btn-sm btn-default btn-outline" @click="editCredit">批量修改额度</a>
+            <a v-if="showBtn('客户管理','新增')" type="button" class="btn btn-default btn-outline x-space" @click="addWhitelist">新增客户</a>
+            <a v-if="showBtn('客户管理','操作历史')" type="button" class="btn btn-default btn-outline x-space" @click="goHistory">操作历史</a>
+            <a v-if="showBtn('客户管理','批量导入')" type="button" class="btn btn-sm btn-default btn-outline x-space" @click="addExcel">批量导入</a>
+            <a v-if="showBtn('客户管理','批量移除')" type="button" class="btn btn-sm btn-default btn-outline x-space"  @click="removeExcel">批量移除</a>
+            <a v-if="showBtn('客户管理','批量修改额度')" type="button" class="btn btn-sm btn-default btn-outline" @click="editCredit">批量修改额度</a>
         </div>
         <div class="x-space-top">
           <table class="table table-bordered ">
@@ -30,8 +30,8 @@
                   <td>{{item.mobile}}</td>
                   <td>{{fMoney(item.creditmoney)}}</td>
                   <td>
-                    <a v-if="showBtn('白名单管理','更新白名单')" href="javascript:;" @click="updateWhitelist(item.id)" :class="updateWhitelistClass" >更新白名单</a> |
-                    <a v-if="showBtn('白名单管理','移除白名单')" href="javascript:;" @click="removeWhitelist(item.id)" :class="removeWhitelistClass" >移除白名单</a>
+                    <a v-if="showBtn('客户管理','更新客户')" href="javascript:;" @click="updateWhitelist(item.id)" :class="updateWhitelistClass" >更新客户</a> |
+                    <a v-if="showBtn('客户管理','移除客户')" href="javascript:;" @click="removeWhitelist(item.id)" :class="removeWhitelistClass" >移除客户</a>
                   </td>
                 </tr>
             </tbody>
@@ -48,7 +48,7 @@
 </template>
 <script>
 /*
- * 白名单管理页面
+ * 客户管理页面
  */
 import action from '../../action/interface.js' 
 import mixins from '../mixin.js'
@@ -85,7 +85,7 @@ export default {
         this.doQuery()
     }
     ,methods: {
-        //新增白名单
+        //新增客户
         addWhitelist () {
             eventHub.$emit('open-modal', addWhitelist);
             //eventHub.$emit('show-alert', 'test');

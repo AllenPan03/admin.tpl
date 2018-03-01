@@ -53,11 +53,6 @@ export default {
     }
   },
   created() {
-    //退出URL
-    let origin = window.location.origin;
-    this.outUrl =
-      origin == "http://192.168.28.131:8013" ||
-      origin == "http://localhost:8013";
   }
 };
 </script>

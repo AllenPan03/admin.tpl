@@ -88,8 +88,7 @@ let data = {
       }
     ]
   },
-  userName: "pan.junlin",
-  ssoId: 38045
+  userName: "adminxxx",
 };
 
 let menuList = data.column.children;
@@ -160,9 +159,9 @@ export default {
         }
       });
       vm.menuList = _list;
-      vm.uname = data.userName;
+      //vm.uname = data.userName;
       //触发显示姓名事件，把username上传到父节点
-      eventHub.$emit("show-uname", data.userName);
+      //eventHub.$emit("show-uname", data.userName);
     }
     //    vm.post(menuAction, {}, function (res) {
     //         //请求返回的数据多一级，过滤

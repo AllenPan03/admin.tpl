@@ -5,7 +5,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" @click="goBack"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title">新增白名单</h4>
+            <h4 class="modal-title">新增客户</h4>
           </div>
           <div class="modal-body">
             <form  id="addList" class="regForm ">
@@ -49,7 +49,7 @@
 </template>
 <script>
 /*
- * 新增白名单
+ * 新增客户
  */
 import action from "../../action/interface.js";
 import mixins from "../mixin.js";

@@ -16,7 +16,7 @@ Vue.use(VueResource)
 const routes = [
     { path: '/', redirect: 'welcome'}
     ,{ path: '/welcome', component: welcome, name: 'welcome'}
-    //白名单
+    //客户
     ,{ path: '/whiteList', component: whiteList, name: 'whiteList'}
 ]
 const router = new VueRouter({

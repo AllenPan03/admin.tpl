@@ -46,7 +46,7 @@
 
 <script>
 /*
- * 白名单操作历史
+ * 客户操作历史
  */
 import action from '../../action/interface.js' 
 import mixins from '../mixin.js'

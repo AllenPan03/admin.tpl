@@ -32,16 +32,6 @@
     cursor: pointer;
   }
 
-  .form {
-    width: 500px;
-    height: 400px;
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   .logo i {
     transition: all 4s;
   }
@@ -49,50 +39,55 @@
   .logo i:hover {
     transform: rotate(1440deg);
   }
-
-  .info {
-    margin: 10px;
-    font-size: 12px;
-    height: 20px;
-
+  .loginBox{
+    .form {
+      width: 500px;
+      height: 400px;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .info {
+      margin: 10px;
+      font-size: 12px;
+      height: 20px;
+  
+    }
+    p {
+      color: #7f8c8d;
+      height: 50px;
+      text-align: center;
+      transition: all 0.4s;
+    }
+    p input {
+      transition: all 0.4s;
+      width: 200px;
+      padding: 8px;
+      border-bottom: 1px solid #42b983;
+    }
+    .input:hover {
+      color: #3aa373;
+    }
+    p input:focus {
+      width: 210px;
+    }
+    button {
+      transition: all 0.4s;
+      color: #7f8c8d;
+      border: 1px solid #3aa373;
+      border-radius: 4px;
+      width: 60px;
+      height: 30px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #3aa373;
+      color: #FFF;
+    }
   }
-
-  .input:hover {
-    color: #3aa373;
-  }
-
-  p {
-    color: #7f8c8d;
-    height: 50px;
-    text-align: center;
-    transition: all 0.4s;
-  }
-
-  p input {
-    transition: all 0.4s;
-    width: 200px;
-    padding: 8px;
-    border-bottom: 1px solid #42b983;
-  }
-
-  p input:focus {
-    width: 210px;
-  }
-
-  button {
-    transition: all 0.4s;
-    color: #7f8c8d;
-    border: 1px solid #3aa373;
-    border-radius: 4px;
-    width: 60px;
-    height: 30px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: #3aa373;
-    color: #FFF;
-  }
+  
   #loading {
     display: none;
     position: absolute;

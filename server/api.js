@@ -3,27 +3,7 @@ const router = express.Router()
 const db = require('./db')
 const fn = () => { }
 
-router.get('/api/getArticle', (req, res) => {
-  const _id = req.query.id
-  db.Article.findOne({ _id }, (err, doc) => {
-    if (err) {
-      console.log(err)
-    } else if (doc) {
-      res.send(doc)
-    }
-  })
-})
-
-router.get('/api/getArticles', (req, res) => {
-  db.Article.find(null, 'title date content', (err, doc) => {
-    if (err) {
-      console.log(err)
-    } else if (doc) {
-      res.send(JSON.stringify(doc))
-    }
-  })
-})
-
+//登录
 router.post('/api/login', (req, res) => {
   const { name, pwd } = req.body
   db.User.findOne({ name }, 'pwd', (err, doc) => {
@@ -46,20 +26,6 @@ router.post('/api/login', (req, res) => {
   })
 })
 
-router.post('/api/saveArticle', (req, res) => {
-  const id = req.body._id
-  const article = {
-    title: req.body.title,
-    date: req.body.date,
-    content: req.body.content
-  }
-  if (id) {
-    db.Article.findByIdAndUpdate(id, article, fn)
-  } else {
-    new db.Article(article).save()
-  }
-  res.status(200).end()
-})
 
 router.post('/api/deleteArticle', (req, res) => {
   db.Article.findByIdAndRemove(req.body.id, fn)
@@ -72,7 +38,7 @@ router.post('/api/savePwd', (req, res) => {
   res.status(200).end()
 })
 
-//白名单列表
+//客户列表
 router.all('/api/white/query', (req, res) => {
   const param = req.body.mobile ? { mobile: req.body.mobile } : null;
   db.White.find(param, '', (err, doc) => {
@@ -90,7 +56,7 @@ router.all('/api/white/query', (req, res) => {
     }
   })
 })
-//白名单查询
+//客户查询
 router.post('/api/white/query/one', (req, res) => {
   const _id = req.body.id
   db.White.findOne({ _id: _id }, (err, doc) => {

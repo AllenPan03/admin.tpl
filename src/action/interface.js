@@ -12,19 +12,19 @@ var action = {
         login: 'login',
         //导航
         menu: 'log/index',
-        //白名单信息
+        //客户信息
         whiteQuery: 'white/query',
-        //白名单操作历史
+        //客户操作历史
         whiteQueryhistory: 'white/queryoperation',
-        //白名单新增接口
+        //客户新增接口
         whiteAdd: 'white/add',
-        //查询单个白名单详情
+        //查询单个客户详情
         whiteOne: 'white/query/one',
-        //导入白名单接口
+        //导入客户接口
         whiteUpload: 'white/upload',
-        //删除白名单接口
+        //删除客户接口
         whiteDelete: 'white/delete',
-        //更新白名单接口
+        //更新客户接口
         whiteUpdate: 'white/update',
     }
 };

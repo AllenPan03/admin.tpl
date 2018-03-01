@@ -4,7 +4,7 @@
 <template>
     <div>
         <!-- 初始化页面 start -->
-        <div id="setup" v-if="!initialized"> 
+        <div id="setup" class="loginBox" v-if="!initialized"> 
             <div class="form">
                 <p class="logo">
                     <i class="fa fa-fire fa-2x"></i>
@@ -32,7 +32,7 @@
         </div>
         <!-- 初始化页面 end -->
         <!-- 登录页面 start -->
-        <div id="login" v-if="initialized&&(!isLogin)">
+        <div id="login" class="loginBox" v-if="initialized&&(!isLogin)">
             <div class="form" @keyup.enter="doLogin">
             <p class="logo">
                 <i class="fa fa-fire fa-2x"></i>
@@ -138,6 +138,7 @@ export default {
       }
     });
     const user = get("user");
+    this.uname = user || '';
     if (!user) this.isLogin = false;
     //if (user && !this.user.name) this.SET_USER({ name: user, pwd: "" });
   },

@@ -5,7 +5,7 @@
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" @click="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title">更新白名单</h4>
+            <h4 class="modal-title">更新客户</h4>
         </div>
         <div class="modal-body">
             <form action="#" method="post" id="updateWhite" class="regForm">
@@ -39,7 +39,7 @@
 </template>
 <script>
 /*
- * 更新白名单
+ * 更新客户
  * params: {modalProps: {id: 记录id}}
  */
 import action from '../../action/interface.js' 
