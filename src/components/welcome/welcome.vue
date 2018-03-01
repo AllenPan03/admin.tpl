@@ -1,7 +1,7 @@
 
 <template>
     <div style="padding:15px;">
-        欢迎使用信贷APP后台！
+        欢迎使用tpl后台！
     </div>
 </template>
 <script>

@@ -167,6 +167,7 @@ export default {
           set("user", this.name, date, "/", window.location.hostname);
           this.info = "登录成功";
           this.isLogin = true;
+          this.uname = this.name || '';
           //setTimeout(() => window.location.reload(), 1500);
         } else {
           this.info = e.msg;
