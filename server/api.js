@@ -37,8 +37,6 @@ router.post('/api/login', (req, res) => {
   })
 })
 
-
-
 //客户列表
 router.all('/api/white/query', (req, res) => {
   const param = req.body.mobile ? { mobile: req.body.mobile } : null;
